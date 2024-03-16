@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Page layout with Flexbox">
+    <link rel="stylesheet" href="stylesheets/main.css">
+    <title>Page layout with Flexbox</title>
+    <style>
+      /* mobile view */
+input{
+    display: none;
+}
+
+header{
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 15px;
+}
+body{
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:white;
+    margin: auto 0;
+    padding: 5px;
+}
+
+img{
+        max-width: 100%; 
+        border-radius: 10px;
+        padding: 5px;
+}
+nav{
+    display: none;
+}
+.bottom-clearfix{
+    display: none;
+
+}
+button{
+    display: none;
+}
+.top-clearfix{
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 15px;
+}
+h2{
+    color: gray;
+}
+.author{
+    color: lightgray;
+}
+footer{
+    background-color: gray;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    padding: 15px;
+
+}
+
+@media all and (min-width: 1000px) {
+    .clearfix{
+        margin-right: 20%;
+        margin-left: 20%;
+        margin-top: 15px;
+
+    }
+    input { 
+        display: block;
+        float: right;
+        border-radius: 5px;
+        background-color: lightgray;
+        align-items: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid lightgray; 
+        margin-bottom: 15px; 
+        padding-bottom: 15px; 
+    }
+    .head {
+        display: block;
+        background-color: lightgray;
+        padding: 15px;
+        text-align: center;
+    }
+    .head li {
+        display: inline;
+        margin-left: 15px;
+    }
+    .head a {
+        color:orange;
+        text-decoration: none;
+    }
+    img {
+        max-width: 100%; 
+        border-radius: 10px;
+        padding: 5px;
+    }
+    .top-middle-container {
+        float: left;
+        width: 60%;
+        margin-bottom: 15px; 
+    }
+    .top-clearfix img,
+    .middle-clearfix img {
+        max-width: 40%; 
+        margin-right: 10px;
+        float: left;
+    }
+    .top-clearfix{
+        padding: 10px;
+    }
+    .bottom-clearfix {
+        display: block;
+        background-color: lightgray;
+        width: 40%;
+        float: right;
+        padding: 15px;
+        border-radius: 15px;
+        padding-bottom: 250px;
+    }
+    .footer-left {
+        display: block;
+        float: left;
+    }
+    .footer-left li {
+        display: inline;
+        margin-left: 15px;
+    }
+    .footer-left a {
+        color: white;
+        text-decoration: none;
+    }
+    .footer-right{
+        float: right;
+    }
+    footer {
+        background-color: gray;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        padding: 30px;
+        margin-top: auto; 
+        
+    }
+    button{
+        display: block;
+        background-color: orange;
+        color:white;
+
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+    .top-middle-container {
+        display: flex;
+        flex-direction: column; /* コンテナ内の要素を縦に配置 */
+    }
+
+    .top-clearfix,
+    .middle-clearfix {
+        width: 100%; /* 幅を100%に設定 */
+        margin-bottom: 15px; /* 上下のマージンを追加 */
+    }
+
+    .bottom-clearfix {
+        display: flex;
+        justify-content: space-between; /* 要素を横に配置 */
+    }
+    
+}
+    </style>
+</head>
+<body>
+    <header>
+        <p class="left-head"><strong>Kifu Oishi</strong></p>
+        <input type="search" name="s" placeholder="Type to search">
+    </header>
+    <main>
+      
+        <nav class="head">
+            <ul>
+                <li><a href="assignment5.html" target="_blank">Home</a></li>
+                <li><a href="https//www.Recentposts.com" target="_blank">Recent posts</a></li>
+                <li><a href="https//www.Oldposts.com" target="_blank">Old posts</a></li>
+                <li><a href="https//www.Contactus.com" target="_blank">Contact us</a></li>
+                <li><a href="https//www.Aboutus.com" target="_blank">About us</a></li>
+            </ul>
+        </nav>
+        <div class="clearfix">
+        <div class="top-middle-container">
+        <div class="top-clearfix">
+            <img src="https://images.unsplash.com/photo-1431794062232-2a99a5431c6c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="niceview">
+            <h2>First post with image</h2>
+            <p class="author">
+                By Adam Smith, Jan 1 2021
+            </p>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus ipsa dolore laboriosam exercitationem, adipisci ratione praesentium aliquid repudiandae blanditiis itaque aspernatur pariatur beatae quos quisquam quo quaerat dolorem. Repellendus, sit.
+            </p>
+            <button type="button">Read More</button>
+        </div>
+
+        <div class="middle-clearfix">
+            <img src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="lake">
+            <h2>Second post with image</h2>
+            <p class="author">By John Doe, Jan 1 2021</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe voluptatum assumenda beatae, unde adipisci exercitationem dolorem consequatur libero quaerat nihil harum nam est non repudiandae. Eos sit temporibus pariatur eveniet?</p>
+            <button type="button">Read More</button>
+        </div>
+      </div>
+
+        <div class="bottom-clearfix">
+            <h2>Secondary content here</h2>
+            <div class="img-left">
+            <img src="https://images.unsplash.com/photo-1444464666168-49d633b86797?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="bird">
+
+          </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quidem sapiente iusto officia minus recusandae cumque similique incidunt magni? Unde assumenda voluptas exercitationem dicta officiis ullam optio aperiam facere beatae?
+
+            </p>
+            </div>
+      </div>
+    </main>
+  
+    <footer>
+        <nav class="footer-left">
+            <ul>
+                <li><a href="https//www.Facebook.com" target="_blank">Facebook</a></li>
+                <li><a href="https//www.Twitter.com" target="_blank">Twitter</a></li>
+                <li><a href="https//www.Youtube.com" target="_blank">YouTube</a></li>
+            </ul>
+        </nav>
+        <p class="footer-right">&copy;  All rights reserved</p>
+    </footer>
+</body>
+</html>

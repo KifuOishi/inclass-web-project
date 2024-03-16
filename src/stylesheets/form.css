@@ -1,0 +1,144 @@
+:root{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+header{
+    font-size: 1rem;
+    padding: 0 1rem;
+    height: 30px;
+    line-height: 30px;
+}
+
+footer{
+    font-size: 1rem;
+    text-align: center;
+    background-color: black;
+    height: 60px;
+    line-height: 60px;
+    color: mediumpurple;
+}
+form{
+    width: 80%;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+.field{
+    margin: 1rem;
+}
+
+.field input:not([type="radio"]):not([type="checkbox"]), textarea, select{
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: .5rem;
+    width: 100%;
+}
+
+button{
+    padding: .8rem 2rem;
+    background-color: gray;
+    border: 0;
+    border-radius: .4rem;
+    font-size: .8rem;
+}
+
+button[type="submit"]{
+    background-color: blue;
+    color: white;
+
+}
+button[type="cancel"]{
+    background-color: white;
+    color: blue;
+}
+h1 {
+    padding-bottom: .4rem;
+    border-bottom: 3px solid blue;
+}
+
+#green input{
+    border: 1px solid lightgreen;
+}
+
+#green p{
+    font-size: .8rem;
+    color: lightgreen;
+}
+
+#red input{
+    border: 1px solid red;
+}
+
+#red p{
+    font-size: .8rem;
+    color: red;
+}
+input, textarea{
+    margin-top: 1rem;
+}
+nav ul{
+    list-style: none;
+    padding-left: 0;
+    margin:0;
+    padding: 0;
+}
+nav li{
+    display: inline;
+    margin-right: .8rem;
+}
+nav a{
+    color: blue;
+    text-decoration: none;
+}
+.left-head{
+    float: left;
+}
+.right-head{
+    float: right;
+}
+
+.clearfix::after {
+    content: "";
+    clear:both;
+    display: table;
+}
+.use-flex #main-container{
+    display: flex;
+    width: 100%;
+    background-color: rgb(228, 237, 248);
+}
+.use-flex #main-col{
+    flex:2;
+    border: 1px solid white;
+    border-radius: 15px;
+    background-color: white;
+    margin: 2rem 0 2rem 8rem;
+    padding: 1rem;
+}
+
+.use-flex #main-container .box{
+    margin-left: 1rem;
+}
+
+.use-flex #aside-col{
+    flex:8;
+    border: 1px solid white;
+    border-radius: 15px;
+    background-color: white;
+    margin: 2rem 8rem 2rem 1rem;
+
+}
+.boxes{
+    margin-left: 1rem;
+}
+.box{
+    padding-bottom: 0.3rem;
+}
+.box a{
+    color: blue;
+    text-decoration: none;
+
+}
+nav a[href="https://contactus.com"] {
+    border-bottom: 2px solid blue;
+}
